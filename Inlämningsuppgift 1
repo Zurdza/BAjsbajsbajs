@@ -1,8 +1,10 @@
 import math
+svar = ""
+J = ""
 print ("Välkommen till lånekalkylprogrammet\n"
 "--------------------------------\n\n")
 
-def calculator():
+while svar!= J:
     loansize = input ("Ange skuld i SEK:")
     loanrate = input ("Ange räntesats i procent:")
 
@@ -13,7 +15,7 @@ def calculator():
     if loantype == 1:
         amortering = input("Ange måntalig amortering:")
 
-        ratecost = (loanrate*0.001) * loansize)
+        ratecost = ((loanrate*0.001) * loansize)
         loanleft = loansize - (ratecost + amortering)
         firstpay = ratecost + amortering
         fifthpay = loansize * (loanrate*0.001/60)
@@ -21,7 +23,7 @@ def calculator():
 
         print("Första månadsbetalningen blir: " + firstpay + " SEK\n"
             "Efter 5 år är månadskostnaden " + fifthpay + " SEK\n"
-            "Det tar " +  + " år att återbetala lånet.")
+            "Det tar " + 1 + " år att återbetala lånet.")
 
         break
 
@@ -35,13 +37,7 @@ def calculator():
         break
         
 print ("Vill du fortsätta att göra beräkningar (J/N)?")
-answer = input("svar:")
-if answer == J:
-    ??? #Ingen aning om hur jag får If-satsen att återvända till början "def calculator(): loansize = input ("Ange skuld i SEK:")"
-
-elif answer == N:
-    break
-    
+svar = input("svar:")
 print("---------------------------------\n"
               "Programmet har avslutats...\n"
               "Ha en trevlig dag!\n")
