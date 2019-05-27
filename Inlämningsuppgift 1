@@ -1,0 +1,47 @@
+import math
+print ("Välkommen till lånekalkylprogrammet\n"
+"--------------------------------\n\n")
+
+def calculator():
+    loansize = input ("Ange skuld i SEK:")
+    loanrate = input ("Ange räntesats i procent:")
+
+    loantype = input ("Välj återbetalningsplan:\n"
+    "1. Rak amortering\n"
+    "2.Annuitetslån \n")
+
+    if loantype == 1:
+        amortering = input("Ange måntalig amortering:")
+
+        ratecost = (loanrate*0.001) * loansize)
+        loanleft = loansize - (ratecost + amortering)
+        firstpay = ratecost + amortering
+        fifthpay = loansize * (loanrate*0.001/60)
+     
+
+        print("Första månadsbetalningen blir: " + firstpay + " SEK\n"
+            "Efter 5 år är månadskostnaden " + fifthpay + " SEK\n"
+            "Det tar " +  + " år att återbetala lånet.")
+
+        break
+
+    elif  loantype == 2:
+        loanyear = input ("Ange på hur många år lånet ska återbetalas:")
+        loanmonth = loansize * (loanrate * ((1 + loanrate) ** loanyear)//(((1 + loanrate) ** loanyear)-1))
+        loanleft = loansize - (60 * loanmonth)
+        print ("Första månadskostnaden blir:" + loanmonth + "SEK\n"
+        "Efter 5 år är månadskostnaden" + loanmonth + "SEK\n"
+        "Den kvarvarande skulden är då" + loanleft + "SEK")
+        break
+        
+print ("Vill du fortsätta att göra beräkningar (J/N)?")
+answer = input("svar:")
+if answer == J:
+    ??? #Ingen aning om hur jag får If-satsen att återvända till början "def calculator(): loansize = input ("Ange skuld i SEK:")"
+
+elif answer == N:
+    break
+    
+print("---------------------------------\n"
+              "Programmet har avslutats...\n"
+              "Ha en trevlig dag!\n")
